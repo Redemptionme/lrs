@@ -1,10 +1,10 @@
 {
     "items": [{
-            "name": "打赏",
+            "name": "空白",
             "link": "/portfolio/"
         },
         {
-            "name": "About",
+            "name": "打赏",
             "link": "/about/"
         }
     ]
