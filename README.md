@@ -1,51 +1,78 @@
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kronik3r/daktilo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+![](https://raw.githubusercontent.com/kkninjae/book/master/github/hero.png)
 
-# Daktilo
-Daktilo is a [Jekyll](jekyllrb.com) theme with a minimal design inspired from typewriters.
 
-# More info and Live preview
-[Click here](http://daktilo.github.io/) to see the theme in action.
+# Book
 
-# Features
-- Fully responsive
-- [Disqus](https://disqus.com/) integration for comments.
-- Google Analytics integration.
-- Syntax Highlighter (using [highlight.js](https://highlightjs.org/)).
-- Support for categories.
-- Font-Awesome Icons.
-- Optimized for SEO.
-- Coolest [404 page ever](http://kronik3r.github.io/daktilo/404.html).
+Book, a simple and ready-to-use Jekyll theme. [Live](http://kkninjae.github.io/book/).
 
-# How to use it
-Start by cloning the repository, then check the `_config.yml` file and change it accordingly.
-Note that the `title` property is what will be displayed as logo.
 
-Finally execute `jekyll serve --watch` and head to [localhost:4000](http://127.0.0.1:4000) to see the result.
+## How-to
 
-# Using categories
-Categories are little bit tricky. Please make sure to do the following for each category:
+*   [Setup](#setup)
+*   [Customization](#customization)
+*   [Writing Posts](#writing-posts)
+*   [Deploy to Github Page](#deploy-to-gh-pages)
 
-- Create a file within `categories` folder with the name of your category
-For example let's say that we have a category called `An Awesome Category` you will need to add an `an-awesome-category.html` file with this content:
 
-``` html
----
-layout: category
-category: an-awesome-category
-permalink: /categories/an-awesome-category/
----
+### <a name="setup" id>Setup</a>
 
+```sh
+# get a copy of book source code
+$ git clone https://github.com/kkninjae/book.git
+
+# running site locally
+$ jekyll serve -w
+
+# from now, you should be able to start development or customization
 ```
 
-- Create an entry inside `_data/categories.yml`
 
-``` html
-- slug: an-awesome-category
-  name: An Awesome Category
+### <a name="customization">Customization</a>
+
+Book is designed as simple as possible, but few changes can make your site uniq.
+You only need to change the values of keys in `_config.yml` file.
+
+*   Change site path: `baseurl`
+*   Give your site a name: `title`
+*   Make a site favicon: `favicon`
+*   Make a special home button image: `avatar`
+
+
+Last but not least
+
+*   If you are using Google analytics: `ga`
+*   If you are using Disqus commenting system: `disqus`
+
+
+### <a name="writing-posts">Writing Posts</a>
+
+Make a markdown file in `_posts` directory,
+follow [Jekyll post naming convention](https://jekyllrb.com/docs/posts/) to name your post,
+and put following front matter to the top of your post.
+You should be able to start to write your awesome post.
+Read this [POST](https://kkninjae.github.io/book/2015/08/28/how-to-use-book.html) to know more tips.
+
+```markdown
+---
+title: Your awesome post title
+date: YYYY-MM-DD
+---
 ```
 
-- Then you will see it in the footer in the `Explore` section.
 
-# License
+### <a name="deploy-to-gh-pages">Deploy to Github Page</a>
 
-The contents of this repository is licensed under [The MIT License.](https://opensource.org/licenses/MIT)
+There is a deploying script built out of box.
+You need to install one more tool before using it which is [npm](https://www.npmjs.com/get-npm).
+This script will push your current static site to `gh-pages` branch.
+If there is no `gh-pages` branch yet, the script will create it for you.
+
+```sh
+# start to deploy your site to Github pages
+$ npm run deploy
+```
+
+
+## End.
+
+If you like this theme, why not give it a star. :)

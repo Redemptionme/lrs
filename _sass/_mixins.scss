@@ -1,5 +1,25 @@
-@mixin centered-block() {
-    display: block;
-    text-align: center;
-    width: 100%;
+/* useful mixins. dependencies: variables */
+
+/* include responsive styles
+   ========================================================================= */
+@mixin breakpoint($size) {
+  @if $size == medium {
+    @media (min-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $size == large {
+    @media (min-width: $breakpoint-large) {
+      @content;
+    }
+  } @else {
+    @error "Size #{$size} is not supported yet";
+  }
+}
+
+/* include mobile only styles
+   ========================================================================= */
+@mixin mobile-only {
+  @media (max-width: $breakpoint-medium - 1) {
+    @content;
+  }
 }
