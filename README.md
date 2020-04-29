@@ -17,4 +17,4 @@ A simple and easy to use blog and portfolio theme for Jekyll
 
 
 ---
-_Powered by [Jekyll](http://jekyllrb.com/) and styled using [Bulma](http://bulma.io/)_
+_Powered by hanlinhe
