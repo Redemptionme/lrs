@@ -1,3 +1,10 @@
+---
+layout: post
+title: "2"
+date: 2017-06-29 12:00:00 -0500
+---
+
+
 # 返回总手册
 
 [链接](https://github.com/Redemptionme/Doc/blob/master/happy/lrs/readme.md)
