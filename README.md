@@ -17,4 +17,4 @@ A simple and easy to use blog and portfolio theme for Jekyll
 
 
 ---
-_Powered by hanlinhe
+_Powered by hanlinhe_
