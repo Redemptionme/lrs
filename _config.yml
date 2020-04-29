@@ -9,9 +9,5 @@ permalink: pretty
 baseurl: /lrs
 
 # social
-github:
-  username: username
 
-twitter:
-  username: username
 theme: jekyll-theme-cayman
