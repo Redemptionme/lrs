@@ -1,0 +1,53 @@
+---
+layout: page
+title: 世间奥义皆在于此
+permalink: /web/game_doc/
+---
+
+{% if site.posts.size == 0 %}
+  <h2>No post found</h2>
+{% endif %}
+
+<ul class="game_doc">
+  <img src="https://i.loli.net/2020/12/16/afxRFIvCnbo3QNP.png" alt="奇迹" />
+  {% for post in site.posts %}
+    {% unless post.next %}
+      <h2>{{ post.date | date: '%Y' }}</h2>
+    {% else %}
+      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+      {% if year != nyear %}
+        <h2>{{ post.date | date: '%Y' }}</h2>
+      {% endif %}
+    {% endunless %}
+ 
+  {% endfor %}
+  
+  {% for tag in site.tags %}
+  
+  
+    {% if tag[0] == "游戏手册" or tag[0] == "教学" %}    
+      <h2 id="{{ tag[0] }}">
+        {{ tag[0] }}
+      </h2>
+      <ul class="tag">
+        {% for post in tag[1] %}
+          {% if post.title != null %}
+            <li>
+              {% if post.link %}
+                <a href="{{ post.link }}">
+              {% else %}
+                <a href="{{ site.baseurl }}{{ post.url }}">
+              {% endif %}
+                  {{ post.title }}
+                </a>
+                <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  
+{% endfor %}
+</ul>
+
