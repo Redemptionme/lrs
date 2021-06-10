@@ -8,10 +8,10 @@
 
 # 描述/签名
 name: 狼人杀
-description: 思维与欢乐的碰撞
+description: 戏精与侦探的园游会
 
 # 输入你的网站域名（如果你没有添加自己的域名，而是直接用GitHub pages分配的域名的话可以省略）
-#url: "127.0.0.1:4000"
+url: "127.0.0.1:4000"
 url: https://redemptionme.github.io/lrs
 
 # 添加你的博客的二级域名，一般来说是你的repository名
@@ -26,7 +26,7 @@ baseurl: /lrs
 #
 
 # 你的博客logo图片URL，建议尺寸不超过300px × 300px
-avatar: https://5b0988e595225.cdn.sohucs.com/images/20190131/46504247a2894434b3c14786b869122a.jpeg
+avatar: https://i.loli.net/2021/02/03/5izXkxwRV4pcBlj.gif
 
 # 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
 favicon: https://i.loli.net/2020/12/13/XiY3IbfHM9z2ZG5.png
@@ -43,12 +43,13 @@ navigation:
   - name: 时间轴
     url: /web/archive
   - name: 标签
-    url: /web/tags    
+    url: /web/tags   
   - name: 关于
-    url: /web/about  
-
+    url: /web/about
+  - name: 留言板
+    url: /web/message
 # 每页的文章数
-paginate: 5
+paginate: 3
 
 # 文章简介的区分标记
 excerpt_separator: <!-- more -->

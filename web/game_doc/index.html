@@ -9,24 +9,13 @@ permalink: /web/game_doc/
 {% endif %}
 
 <ul class="game_doc">
-  <img src="https://i.loli.net/2020/12/16/afxRFIvCnbo3QNP.png" alt="奇迹" />
-  {% for post in site.posts %}
-    {% unless post.next %}
-      <h2>{{ post.date | date: '%Y' }}</h2>
-    {% else %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-      {% if year != nyear %}
-        <h2>{{ post.date | date: '%Y' }}</h2>
-      {% endif %}
-    {% endunless %}
- 
-  {% endfor %}
+  <img src="https://i.loli.net/2021/02/03/Nc6UpfYv7kVJnZy.gif" alt="奇迹" />
+  
   
   {% for tag in site.tags %}
   
   
-    {% if tag[0] == "游戏手册" or tag[0] == "教学" %}    
+    {% if tag[0] == "游戏手册" or tag[0] == "教学" or tag[0] == "零基础入门" or tag[0] == "比赛手册" %}    
       <h2 id="{{ tag[0] }}">
         {{ tag[0] }}
       </h2>
@@ -49,5 +38,6 @@ permalink: /web/game_doc/
     {% endif %}
   
 {% endfor %}
+<img src="https://i.loli.net/2021/02/03/vZ2WBia1ytYUT8d.gif" width="150" height="150" alt="ab" />
 </ul>
 

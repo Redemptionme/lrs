@@ -9,24 +9,53 @@ permalink: /web/join_game/
 {% endif %}
 
 <ul class="join_game">
-  <img src="https://langrensha.16163.com/data/attachment/common/65/common_1916_icon.png?B08ZIh" alt="孩" />
-  {% for post in site.posts %}
-    {% unless post.next %}
-      <h2>{{ post.date | date: '%Y' }}</h2>
-    {% else %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-      {% if year != nyear %}
-        <h2>{{ post.date | date: '%Y' }}</h2>
-      {% endif %}
-    {% endunless %}
- 
+  <img src="https://i.loli.net/2021/02/04/crv1RTuS5oZpywD.gif" width="150" height="150" alt="bmpic" />  
+  {% for tag in site.tags %}   
+    {% if tag[0] == "第二届狼王争霸赛" %}    
+      <h2 id="{{ tag[0] }}">
+        {{ tag[0] }}(每周五,周六)
+      </h2>      
+      <ul class="tag">
+        {% for post in tag[1] %}
+          {% if post.title != null %}
+            <li>
+              {% if post.link %}
+                <a href="{{ post.link }}">
+              {% else %}
+                <a href="{{ site.baseurl }}{{ post.url }}">
+              {% endif %}
+                  {{ post.title }}
+                </a>
+                <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}           
   {% endfor %}
-  
-  {% for tag in site.tags %}
-  
-  
+  {% for tag in site.tags %}   
     {% if tag[0] == "报名" %}    
+      <h2 id="{{ tag[0] }}">
+        每周活动{{ tag[0] }}~就是玩~(比赛期间暂停)
+      </h2>
+      <ul class="tag">
+        {% for post in tag[1] %}
+          {% if post.title != null %}
+            <li>
+              {% if post.link %}
+                <a href="{{ post.link }}">
+              {% else %}
+                <a href="{{ site.baseurl }}{{ post.url }}">
+              {% endif %}
+                  {{ post.title }}
+                </a>
+                <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}  
+    {% if tag[0] == "报名结束" %}    
       <h2 id="{{ tag[0] }}">
         {{ tag[0] }}
       </h2>
@@ -46,8 +75,8 @@ permalink: /web/join_game/
           {% endif %}
         {% endfor %}
       </ul>
-    {% endif %}
-  
-{% endfor %}
+    {% endif %}      
+  {% endfor %}
+  <img src="https://i.loli.net/2021/02/03/vZ2WBia1ytYUT8d.gif" width="150" height="150" alt="ab" />  
 </ul>
 

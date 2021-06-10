@@ -362,12 +362,12 @@ img {
   .site-avatar {
     margin:0 auto;
     display: block;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 800px;
+    max-height: 800px;
 
     @include mobile {
-      max-width: 120px;
-      max-height: 120px;
+      max-width: 400px;
+      max-height: 400px;
     }
 
     img {
@@ -582,10 +582,10 @@ nav {
     float: left;
     width: 50%;
     a {
-      color: $base-lighten-color;
+      color: $black;
       border: 1px solid $divider-color;
       padding: 10px 20px;
-      background: $background-color;
+      background: $bgred;
 
       &:hover, &:focus {
         color: $link-lighten-color;
@@ -600,10 +600,10 @@ nav {
     text-align: right;
     width: 50%;
     a {
-      color: $base-lighten-color;
+      color: $black;
       border: 1px solid $divider-color;
       padding: 10px 20px;
-      background: $background-color;
+      background: $bgred;
 
       &:hover, &:focus {
         color: $link-lighten-color;
@@ -749,6 +749,63 @@ footer {
     }
   }
 }
+
+.search {
+  position: relative;
+  height: 30px;
+  text-align: right;
+  line-height: 30px;
+  padding-right: 10px;
+}
+
+.search .search-icon {
+  float: right;
+  height: 100%;
+  margin: 0 10px;
+  line-height: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.search .search-input {
+  float: right;
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.search .search-clear {
+  display: none;
+}
+
+.search .search-results {
+  display: block;
+  z-index: 1000;
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  width: 50%;
+  max-height: 400px;
+  overflow: auto;
+  text-align: left;
+  border-radius: 5px;
+  background: #ccc;
+  box-shadow: 0 .3rem .5rem #333;
+}
+
+.search .search-results .result-item {
+  background: rgb(255, 255, 255);
+  color: #000;
+  margin: 5px;
+  padding: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
